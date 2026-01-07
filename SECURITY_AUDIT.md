@@ -16,7 +16,7 @@
 
 **Issue**: The `.env` file containing your OpenAI API key was committed to git repository.
 
-**Exposed Key**: `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`
+**Exposed Key**: `sk-proj-8aps...pJEA` (REDACTED - key has been exposed and must be rotated)
 
 **Required Actions**:
 
