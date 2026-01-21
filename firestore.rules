@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow users to read, create, and update their own user document.
+    // The document ID must match their user ID (UID).
+    match /users/{userId} {
+      allow read, create, update: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}

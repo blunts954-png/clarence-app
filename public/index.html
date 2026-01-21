@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYNAPSE AI | INTELLIGENCE ACQUISITION</title>
+    <style>
+        :root { --neon: #00ff41; --dark: #0d1117; --text: #e6edf3; }
+        body { background-color: var(--dark); color: var(--text); font-family: 'Courier New', monospace; margin: 0; padding: 0; line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+        h1, h2, h3 { text-transform: uppercase; letter-spacing: 2px; color: #fff; }
+        h1 { font-size: 3.5rem; text-shadow: 0 0 10px var(--neon); margin-bottom: 0.5rem; }
+        .hero { text-align: center; padding: 6rem 0; border-bottom: 1px solid #30363d; }
+        .btn { display: inline-block; background: var(--neon); color: #000; padding: 1rem 2rem; font-weight: bold; text-decoration: none; text-transform: uppercase; margin: 1rem; border: 1px solid var(--neon); transition: 0.3s; }
+        .btn:hover { background: transparent; color: var(--neon); box-shadow: 0 0 15px var(--neon); cursor: pointer; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 4rem 0; }
+        .card { border: 1px solid #30363d; padding: 2rem; background: #161b22; transition: 0.3s; }
+        .card:hover { border-color: var(--neon); transform: translateY(-5px); }
+        .price { font-size: 2.5rem; color: var(--neon); }
+        .audit { font-size: 0.8rem; color: #8b949e; margin-top: 4rem; text-align: center; }
+        .glitch { position: relative; }
+        #auth-container { position: fixed; top: 1rem; right: 1rem; background: #161b22; padding: 1rem; border: 1px solid #30363d; border-radius: 5px; z-index: 100; }
+        #auth-container input { background: #0d1117; border: 1px solid #30363d; color: var(--text); padding: 0.5rem; margin-bottom: 0.5rem; }
+        #auth-container button { background: var(--neon); color: #000; border: none; padding: 0.5rem 1rem; cursor: pointer; }
+        #user-status { color: var(--neon); }
+        /* Mobile adjustment */
+        @media(max-width: 600px) { h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+    <div id="auth-container">
+        <div id="login-view">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login-btn">Login</button>
+            <button id="signup-btn">Sign Up</button>
+        </div>
+        <div id="user-view" style="display: none;">
+            <p id="user-status"></p>
+            <button id="logout-btn">Logout</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="hero">
+            <h1 class="glitch">SYNAPSE AI</h1>
+            <p style="color: var(--neon);">/// SYSTEM ONLINE /// TARGETING UNDERVALUED ASSETS ///</p>
+            <br>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+                The average human spends 12 hours a week searching for deals.<br>
+                Synapse scans 5,000 sectors in 40 seconds.
+            </p>
+            <br><br>
+            <a href="#pricing" class="btn">INITIALIZE ACCESS</a>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>🕷️ The Spider</h3>
+                <p>Auto-scrolls, bypasses lazy-loading, and extracts hidden data field (Emails, VINs, Phone Numbers).</p>
+            </div>
+            <div class="card">
+                <h3>🧠 The Brain</h3>
+                <p>AI analysis identifies "Undervalued" assets automatically. It doesn't just scrape; it thinks.</p>
+            </div>
+            <div class="card">
+                <h3>🛡️ Ghost Mode</h3>
+                <p>Enterprise-grade proxy rotation. You remain invisible. The target never knows you were there.</p>
+            </div>
+        </div>
+
+        <h2 style="text-align: center; border-top: 1px solid #30363d; padding-top: 4rem;" id="pricing">SELECT CLEARANCE LEVEL</h2>
+        
+        <div class="grid">
+            <div class="card" style="text-align: center;">
+                <h3>OPERATIVE</h3>
+                <div class="price">$19.99<span style="font-size: 1rem;">/mo</span></div>
+                <ul style="text-align: left; list-style: none; padding: 0; margin: 2rem 0; color: #8b949e;">
+                    <li>✓ 7-Day Memory Retention</li>
+                    <li>✓ Unlimited Scans</li>
+                    <li>✓ Standard Speed</li>
+                    <li>✓ CSV Export</li>
+                </ul>
+                <button class="btn" style="width: 80%;" onclick="createCheckout('operative')">JOIN THE SYNAPSE</button>
+            </div>
+            
+            <div class="card" style="text-align: center; border: 1px solid var(--neon);">
+                <h3 style="color: var(--neon);">GOD MODE</h3>
+                <div class="price">$99.99<span style="font-size: 1rem;">/mo</span></div>
+                <ul style="text-align: left; list-style: none; padding: 0; margin: 2rem 0; color: #fff;">
+                    <li>✓ <strong>Forever Memory (The Vault)</strong></li>
+                    <li>✓ <strong>Priority Proxy Rotation</strong></li>
+                    <li>✓ <strong>Deep-Scan Technology</strong></li>
+                    <li>✓ Lead Detective Pro</li>
+                </ul>
+                <button class="btn" style="width: 80%;" onclick="createCheckout('godmode')">GRANT ACCESS</button>
+            </div>
+        </div>
+
+        <div class="audit">
+            <p>SYSTEM STATUS: OPERATIONAL | REGION: GLOBAL | ENCRYPTION: 256-BIT</p>
+            <p>&copy; 2026 SYNAPSE AI // RESISTANCE CORE</p>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-functions.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDBfuowc1DemVHebL01Bdx_g87b3i0Wc4A",
+        authDomain: "chipper-bridge-8675.firebaseapp.com",
+        projectId: "chipper-bridge-8675",
+        storageBucket: "chipper-bridge-8675.appspot.com",
+        messagingSenderId: "561587100404",
+        appId: "1:561587100404:web:69a9aca3ff3c3ed64c5ca1"
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+      const functions = firebase.functions();
+
+      const loginView = document.getElementById('login-view');
+      const userView = document.getElementById('user-view');
+      const userStatus = document.getElementById('user-status');
+      const loginBtn = document.getElementById('login-btn');
+      const signupBtn = document.getElementById('signup-btn');
+      const logoutBtn = document.getElementById('logout-btn');
+      const emailInput = document.getElementById('email');
+      const passwordInput = document.getElementById('password');
+
+      let currentUser = null;
+
+      auth.onAuthStateChanged(user => {
+        currentUser = user;
+        if (user) {
+          loginView.style.display = 'none';
+          userView.style.display = 'block';
+          db.collection('users').doc(user.uid).onSnapshot(doc => {
+              if (doc.exists) {
+                  const userData = doc.data();
+                  userStatus.textContent = `STATUS: ${userData.plan}`;
+              } else {
+                userStatus.textContent = `STATUS: GUEST`;
+              }
+          }, error => {
+              console.error("Error fetching user data:", error);
+              userStatus.textContent = `STATUS: GUEST`;
+          });
+        } else {
+          loginView.style.display = 'block';
+          userView.style.display = 'none';
+        }
+      });
+      
+      loginBtn.addEventListener('click', () => {
+        const email = emailInput.value;
+        const password = passwordInput.value;
+        auth.signInWithEmailAndPassword(email, password)
+          .catch(error => console.error("Login failed:", error));
+      });
+
+      signupBtn.addEventListener('click', () => {
+        const email = emailInput.value;
+        const password = passwordInput.value;
+        auth.createUserWithEmailAndPassword(email, password)
+          .then(userCredential => {
+            db.collection('users').doc(userCredential.user.uid).set({
+                email: userCredential.user.email,
+                plan: 'GUEST'
+            })
+          })
+          .catch(error => console.error("Signup failed:", error));
+      });
+
+      logoutBtn.addEventListener('click', () => {
+        auth.signOut();
+      });
+
+      async function createCheckout(plan) {
+        if (!currentUser) {
+            alert("Please log in or sign up to select a plan.");
+            return;
+        }
+        
+        const createCheckoutFunction = functions.httpsCallable('createCheckout');
+        try {
+            const result = await createCheckoutFunction({ plan: plan });
+            window.location.href = result.data.url;
+        } catch (error) {
+            console.error("Error creating checkout:", error);
+            alert("There was an error creating the payment link. Please try again.");
+        }
+      }
+
+    </script>
+
+</body>
+</html>
